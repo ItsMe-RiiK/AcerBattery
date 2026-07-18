@@ -1,0 +1,4 @@
+build/
+release/
+
+compile_flags.txt
