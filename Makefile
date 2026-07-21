@@ -1,7 +1,15 @@
 CC := gcc
 CFLAGS := -Wall -O2
 
-RELEASE_DIR := release
+# Dynamically detect if we are inside the KernelDriver monorepo or standalone
+ifneq ($(wildcard ../../src/main.c),)
+    # Monorepo mode
+    ROOT_DIR := $(abspath ../..)
+    RELEASE_DIR := $(ROOT_DIR)/release
+else
+    # Standalone submodule mode
+    RELEASE_DIR := release
+endif
 SRC_DIR := src
 BUILD_DIR := build
 
