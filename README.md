@@ -18,17 +18,18 @@ To compile and run this application, you must have the following installed on yo
 - **Make** and **GCC**
 - **Polkit (`pkexec`)**: Used to safely prompt for root permissions without hardcoding passwords.
 
-## Installation & Compilation
+## Installation
 
-1. **Clone the project** (ensure you pull the required submodules):
+1. **Clone the project**:
    ```bash
-   git clone --recursive <repository-url>
+   git clone https://github.com/ItsMe-RiiK/AcerBattery.git
+   cd AcerBattery
    ```
-2. **Compile the GUI**:
+2. **Run the installation script**:
    ```bash
-   make
+   ./install.sh
    ```
-   This will output the compiled binary into the `release/` directory.
+   This script will automatically initialize the `RKKDR` submodule if needed, compile the GUI application, and install the `RKKDR` kernel driver via DKMS so it persists across kernel updates.
 
 ## Desktop Integration
 
