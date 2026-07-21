@@ -1,4 +1,7 @@
 build/
 release/
+*.log
 
 compile_flags.txt
+gui_error.log
+update_submodule.sh

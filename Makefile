@@ -1,5 +1,6 @@
 CC := gcc
-CFLAGS := -Wall -O2
+CFLAGS := -Wall -O2 $(shell pkg-config --cflags gtk+-3.0)
+LDFLAGS := $(shell pkg-config --libs gtk+-3.0)
 
 # Dynamically detect if we are inside the KernelDriver monorepo or standalone
 ifneq ($(wildcard ../../src/main.c),)
@@ -23,7 +24,7 @@ prep:
 	@mkdir -p $(BUILD_DIR) $(RELEASE_DIR)
 
 $(TARGET): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 	@echo "Built AcerBattery utility at $(TARGET)"
 
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
