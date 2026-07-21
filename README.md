@@ -2,7 +2,6 @@
 
 A native, lightweight GTK3 graphical interface for managing Acer battery settings (Health Mode and Calibration) via the [RKKDR](https://github.com/ItsMe-RiiK/RKKDR) Linux kernel module.
 
-![Acer Battery Icon](image/Batt.png)
 
 ## Features
 
