@@ -58,4 +58,4 @@ If you ever need to update the submodule commit reference to match upstream chan
 This script will fetch the latest commits, update your submodule reference, commit the change, and immediately clean up the copied files again.
 
 ## License
-Refer to the main `RKKDR` repository for licensing information.
+This project is licensed under the GPL-3.0 [LICENSE](License)
