@@ -1,6 +1,7 @@
 build/
 release/
 *.log
+.vscode/
 
 compile_flags.txt
 gui_error.log
